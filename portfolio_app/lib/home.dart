@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 
 class MyHome extends StatefulWidget {
@@ -57,33 +57,44 @@ class _MyHomeState extends State<MyHome> {
   }
 
   myspecialization(icon, text) {
-    return Container(
+  return GestureDetector(
+    onTap: () {
+      launchUrl(Uri.parse('https://github.com/Lokesh002cse'));
+    },
+    child: Container(
       width: 105,
       height: 115,
       child: Card(
         margin: EdgeInsets.all(0),
         color: Color.fromARGB(255, 30, 31, 30),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
         child: Container(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(
-              icon,
-              color: Colors.white,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              text,
-              style: TextStyle(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              FaIcon(
+                icon,
+                color: Colors.white,
+              ),
+              SizedBox(height: 10),
+              Text(
+                text,
+                style: TextStyle(
                   color: Colors.white,
-                  fontSize: 16),
-            )
-          ]),
+                  fontSize: 16,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -228,7 +239,7 @@ class _MyHomeState extends State<MyHome> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          myspecialization(FontAwesomeIcons.github, 'Github'),
+                          myspecialization(FontAwesomeIcons.github, 'GitHub'),
                           myspecialization(FontAwesomeIcons.python, 'Python'),
                           myspecialization(
                               FontAwesomeIcons.database, 'Database'),
