@@ -56,7 +56,7 @@ class _MyHomeState extends State<MyHome> {
     );
   }
 
-  myspecialization(icon, text) {
+   myspecialization(icon, text) {
   return GestureDetector(
     onTap: () {
       launchUrl(Uri.parse('https://github.com/Lokesh002cse'));
@@ -93,7 +93,6 @@ class _MyHomeState extends State<MyHome> {
     ),
   );
 }
-
 
 
   @override
