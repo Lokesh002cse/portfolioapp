@@ -132,7 +132,7 @@ class _AboutState extends State<About> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      IconButton(onPressed: ((){}), icon: FaIcon(FontAwesomeIcons.instagram,color: Colors.white,)),
+                      
                       IconButton(
   onPressed: () {
     launchUrl(Uri.parse('https://www.linkedin.com/in/lokeshkmr2511/'));
@@ -140,7 +140,7 @@ class _AboutState extends State<About> {
   icon: FaIcon(FontAwesomeIcons.linkedin, color: Colors.white),
 ),
 
-                      IconButton(onPressed: ((){}), icon: FaIcon(FontAwesomeIcons.twitter,color: Colors.white,)),
+                      
                       IconButton(
   onPressed: () {
     launchUrl(Uri.parse('https://github.com/Lokesh002cse'));
