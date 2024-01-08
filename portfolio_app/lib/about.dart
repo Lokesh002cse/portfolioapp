@@ -133,7 +133,21 @@ class _AboutState extends State<About> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       
-     
+                      IconButton(
+  onPressed: () {
+    launchUrl(Uri.parse('https://www.linkedin.com/in/lokeshkmr2511/'));
+  },
+  icon: FaIcon(FontAwesomeIcons.linkedin, color: Colors.white),
+),
+
+                      
+                      IconButton(
+  onPressed: () {
+    launchUrl(Uri.parse('https://github.com/Lokesh002cse'));
+  },
+  icon: FaIcon(FontAwesomeIcons.github, color: Colors.white),
+),
+
                     ],
 
                   )
