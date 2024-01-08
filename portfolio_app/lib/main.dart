@@ -9,7 +9,9 @@ import 'package:portfolio_app/projects.dart';
 void main() {
   runApp(MaterialApp(
    theme: ThemeData(
-    fontFamily: "Soho"
+    fontFamily: "Soho",
+    
+
    ),
     debugShowCheckedModeBanner: false,
     initialRoute: 'about',
